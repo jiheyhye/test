@@ -25,12 +25,81 @@ header{
   margin:0px auto;
 }
 
+header{position:relative;}
+
+.h_inner > h1{
+  width:200px; height:40px;
+  background-color:#656565;
+  float:left;
+  margin:30px 0px;
+}
+
+/* 내비게이션 서식 */
+.gnb{
+  width:500px; height:40px;
+  float:right;
+  margin-top:60px;
+  text-align:center;
+}
+.gnb > ul > li{
+  float:left;
+  position:relative;
+  background-color:#00C73C;
+}
+.gnb > ul > li > a{
+  display:block;
+  padding:0px 32px;
+  font-size:16px;
+  line-height:40px;
+  transition:0.5s;
+}
+.gnb > ul > li > a:hover{
+  background-color:#737373;
+  color:#fff;
+}
+
+.sub{
+  position:absolute;
+  width:100%;
+  z-index:1000;
+  /* transition:0.5s; */
+  display:none;
+  background-color:#737373;
+}
+.sub > li > a:hover{
+  background-color:#00c73c49;
+}
+.sub > li > a{
+  font-size:14px;
+  display:block;
+  line-height:40px;
+  color:#fff;
+  transition:0.5s;
+}
+
+.gnb:hover .sub{
+  display:block;
+}
+.gnb:hover::after{
+  display:block;
+  content:"";
+  width:100%;
+  position:absolute;
+  top:100px; left:0px;
+  background-color:#737373;
+  height:160px;
+  z-index:999;
+}
+
+
+
 /* 메인영역 서식 */
 main{
   width:1200px; height:500px;
   margin:0px auto;
   display:flex;
   flex-wrap:wrap;
+  
 }
 
  /* 슬라이드 */
@@ -68,8 +137,22 @@ main{
  /* 공지사항 */
 
  /* 갤러리 */
+ .gallery > ul{display:flex;}
+ .gallery img{
+   width:120px;
+ }
 
  /* 바로가기 */
+.icon > h3{
+  display:none;
+}
+.icon > ul{
+  display:flex;
+  flex-wrap:wrap;
+}
+.icon > ul > li{
+  width:200px;
+}
 
 
 /* 푸터영역 서식 */
